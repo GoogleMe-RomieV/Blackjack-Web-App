@@ -1,0 +1,512 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    height: 25em;
+    display: block;
+    position: relative;
+    
+    background: #F2DC16;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  header {
+    display: flex;
+    width: 100%;
+    height: 15%;
+    background-color: #171612;
+    
+    -webkit-text-fill-color: transparent;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+
+  h1 {
+    background: -webkit-linear-gradient(#861FA6, #F2DC16);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px #171612; 
+    padding: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  main {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    
+    background-color: #861FA6;
+  }
+
+  h2 {
+    background: -webkit-linear-gradient(#861FA6, #F2DC16);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: dashed;
+    text-align: center;
+  }
+
+  h4 {
+    margin-right: 10px;
+    background: -webkit-linear-gradient(#861FA6, #F2DC16);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: dashed;
+    text-align: center;
+  }
+  h5 {
+    color: #171612;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  h6 {
+    color: #171612;
+    font-size: 0.5em;
+    font-weight: bold;
+  }
+
+  footer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0px;
+    position: relative;
+    top:100px;
+  }
+
+  footer > ul {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link {
+    margin: 0;
+    padding-right: 1em;
+  }
+    .copyright {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-self: center;
+      position: absolute;
+    }
+    
+  .resultbox {
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    background-color: #171612;
+  }
+#results {
+  display: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+  .showResult {
+    visibility: visible;
+  }
+
+  .hideResult {
+    visibility: hidden;
+  }
+
+  #scores {
+    margin: 10px, 15px, 15, 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .playersHand {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    top: 80%;
+    padding-top: 10px;
+    border-top: 2px, white;
+    background: -webkit-linear-gradient(#861FA6, #F2DC16);
+
+    -webkit-text-fill-color: #000;
+    justify-content: flex-start;
+    align-items: center;
+    
+  }
+    .hand {
+      display: flex;
+      position: absolute;
+      width: 90vw;
+      height: 15vh;
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+        .hand > li {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 6vw;
+            height: 15vh;
+            margin: 0;
+            padding: 0;
+            border-radius: 5px;
+            color: black;
+            justify-content: flex-start;
+            align-content: center;
+        }
+            .hand img {
+            position:absolute;
+            top:0;
+            margin: 0 auto;
+            max-width: 6vw;
+            /*width: 1vw;*/
+            height: 15vh;
+            border: 1.5px black solid;
+            border-bottom: 2px black solid;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            justify-content: center;
+            align-content: center;
+            }
+
+    .currentTotal {
+        display: flex;
+        width: 9vw;
+        height: 9vw;
+        border-radius: 50%;
+        background-color: green;
+        color: black;
+        position:fixed;
+        right: 0;
+        margin: 0;
+        padding:0;
+        border: 2px black solid;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+
+    }
+
+    .buttons {
+        display: flex;
+        border-radius: 25%;
+        position: fixed;
+        right: 8vw;
+        margin: 100px;
+        justify-content: center;
+        
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+        border-right-width: 10px;
+        padding-right: 10px;
+    }
+
+    .button1 {
+        width: 7vw;
+        height: 7vw;
+        border-radius: 13%;
+        display: flex;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .button1:hover {
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .button2 {
+        width: 8vw;
+        height: 8vh;
+        border-radius: 13%;
+        display: flex;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .button2:hover {
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    
+    .hide {
+        display:none;
+        visibility: hidden;
+    }
+
+    /* Subdivision Classes for cards */
+    h3 {
+      display: none;
+    }
+    img {
+      display:block;
+      width:6vw;
+      height: 10vh;
+      margin-left: 0 auto;
+      margin-right: 0 auto;
+      background-color: transparent;
+      overflow:hidden;
+    }
+
+    /* Cards list */
+    .card-a-s {
+      background-image: url(../images/card-A-s.svg);
+      
+    }
+    .card-2-s {
+      background-image: url(../images/card-2-s.svg);
+      
+    } 
+    .card-3-s {
+      background-image: url(../images/card-3-s.svg);
+      
+    }
+    .card-4-s {
+      background-image: url(../images/card-4-s.svg);
+      
+    }
+    .card-5-s {
+      background-image: url(../images/card-5-s.svg);
+      
+    }
+    .card-6-s {
+      background-image: url(../images/card-6-s.svg);
+      
+    }
+    .card-7-s {
+      background-image: url(../images/card-7-s.svg);
+      
+    }
+    .card-8-s {
+      background-image: url(../images/card-8-s.svg);
+      
+    }
+    .card-9-s {
+      background-image: url(../images/card-9-s.svg);
+      
+    }
+    .card-10-s{
+      background-image: url(../images/card-10-s.svg);
+      
+    }
+    .card-j-s {
+      background-image: url(../images/card-J-s.svg);
+      
+    }
+    .card-q-s {
+      background-image: url(../images/card-Q-s.svg);
+      
+    }
+    .card-k-s {
+      background-image: url(../images/card-K-s.svg);
+      
+    }
+
+
+    .card-a-h {
+      background-image: url(../images/card-A-h.svg);
+      
+    }
+    .card-2-h {
+      background-image: url(../images/card-2-h.svg);
+      
+    } 
+    .card-3-h {
+      background-image: url(../images/card-3-h.svg);
+      
+    }
+    .card-4-h {
+      background-image: url(../images/card-4-h.svg);
+      
+    }
+    .card-5-h {
+      background-image: url(../images/card-5-h.svg);
+      
+    }
+    .card-6-h {
+      background-image: url(../images/card-6-h.svg);
+      
+    }
+    .card-7-h {
+      background-image: url(../images/card-7-h.svg);
+      
+    }
+    .card-8-h {
+      background-image: url(../images/card-8-h.svg);
+      
+    }
+    .card-9-h {
+      background-image: url(../images/card-9-h.svg);
+      
+    }
+    .card-10-h{
+      background-image: url(../images/card-10-h.svg);
+      
+    }
+    .card-j-h {
+      background-image: url(../images/card-J-h.svg);
+      
+    }
+    .card-q-h {
+      background-image: url(../images/card-Q-h.svg);
+      
+    }
+    .card-k-h {
+      background-image: url(../images/card-K-h.svg);
+      
+    }
+
+
+    .card-a-d {
+      background-image: url(../images/card-A-d.svg);
+      
+    }
+    .card-2-d {
+      background-image: url(../images/card-2-d.svg);
+      
+    } 
+    .card-3-d {
+      background-image: url(../images/card-3-d.svg);
+      
+    }
+    .card-4-d {
+      background-image: url(../images/card-4-d.svg);
+      
+    }
+    .card-5-d {
+      background-image: url(../images/card-5-d.svg);
+      
+    }
+    .card-6-d {
+      background-image: url(../images/card-6-d.svg);
+      
+    }
+    .card-7-d {
+      background-image: url(../images/card-7-d.svg);
+      
+    }
+    .card-8-d {
+      background-image: url(../images/card-8-d.svg);
+      
+    }
+    .card-9-d {
+      background-image: url(../images/card-9-d.svg);
+      
+    }
+    .card-10-d{
+      background-image: url(../images/card-10-d.svg);
+      
+    }
+    .card-j-d {
+      background-image: url(../images/card-J-d.svg);
+      
+    }
+    .card-q-d {
+      background-image: url(../images/card-Q-d.svg);
+      
+    }
+    .card-k-d {
+      background-image: url(../images/card-K-d.svg);
+      
+    }
+
+
+    .card-a-c {
+      background-image: url(../images/card-A-c.svg);
+      
+    }
+    .card-2-c {
+      background-image: url(../images/card-2-c.svg);
+      
+    } 
+    .card-3-c {
+      background-image: url(../images/card-3-c.svg);
+      
+    }
+    .card-4-c {
+      background-image: url(../images/card-4-c.svg);
+      
+    }
+    .card-5-c {
+      background-image: url(../images/card-5-c.svg);
+      
+    }
+    .card-6-c {
+      background-image: url(../images/card-6-c.svg);
+      
+    }
+    .card-7-c {
+      background-image: url(../images/card-7-c.svg);
+      
+    }
+    .card-8-c {
+      background-image: url(../images/card-8-c.svg);
+      
+    }
+    .card-9-c {
+      background-image: url(../images/card-9-c.svg);
+      
+    }
+    .card-10-c{
+      background-image: url(../images/card-10-c.svg);
+      
+    }
+    .card-j-c {
+      background-image: url(../images/card-J-c.svg);
+      
+    }
+    .card-q-c {
+      background-image: url(../images/card-Q-c.svg);
+      
+    }
+    .card-k-c {
+      background-image: url(../images/card-K-c.svg);
+      
+    }

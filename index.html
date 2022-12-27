@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackJack Alpha 1</title>
+    <link href="/styles/style.css" rel="stylesheet">
+</head>
+<body>
+  <header><h1>BlackJack Live</h1></header>
+  <main>
+    <div class="resultbox">
+      <h2 id="results" class="hideResult"></h2>
+      <div id="scores" class="hideResult">
+        <h4 id="Player"></h4><h4 id="spacer">|</h4><h4 id="Dealer"></h4>
+      </div>
+      <div id="potContainer" class="hideResult"><h4 id="pot"></h4></div>
+      <div id="winningsContainer" class="showResult"><h4 id="winnings" class="winnings" >Player: $5000 | Dealer: $5000</h4></div>
+    </div>
+  </main>
+  <div class="playersHand">
+      <ul class="hand"></ul>
+      <div class="currentTotal">
+          <p class="total">$0</p>
+      </div>
+      <div class="buttons">
+          <button id="lBetButton" class="button1" onclick="lowBetButton()">Low Bet ($100)</button>
+          <button id="mBetButton" class="button1" onclick="mediumBetButton()">Med Bet ($500)</button>
+          <button id="hBetButton" class="button1" onclick="highBetButton()">High Bet ($1000)</button>
+          <button id="hitButton" class="button1" onclick="hitButton()">Hit</button>
+          <button id="foldButton" class="button1" name="fold" onclick="removeAll()">Fold</button>
+          <button id="stayButton" class="button1" name="stay" onclick="checkResult()">Stay</button>
+          <button id="resetButton" class="hide" name="reset" onclick="reset()">Reset</button>          
+          <button id="playAgain" class="hide" name="playAgain" onclick="newRound()">Play again</button>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li class="link"><h5>About</h5></li>
+        <li class="link"><h5>Terms of Use</h5></li>
+        <li class="link"><h5>Contact</h5></li>
+      </ul>
+      <h6 class="copyright">Valentin Productions LLC</h6>
+    </footer>
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
