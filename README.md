@@ -1,2 +1,2 @@
 "# Blackjack-Web-" 
-# Blackjack-Web-App
+# Blackjack Game
